@@ -141,6 +141,7 @@ $NCGetAppUpdateStatus = $xmlGetNCStatusPage.ocs.data.nextcloud.system.apps.num_u
 
 # Generate XML Output for PRTG 
 # Start
+
 Write-Host "
 <?xml version='1.0' encoding='UTF-8' ?>
 <prtg>"
