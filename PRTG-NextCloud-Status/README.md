@@ -1,4 +1,5 @@
-Version Status: Beta
+
+Version Status: Beta v1.1
 
 # PRTG NextCloud Status
 PowerShell Script to get some Information about your NextCloud Server
@@ -11,6 +12,7 @@ If you want Monitoring Systems on Remote Probes, Copy Script to the Remote Probe
 
 ### Configuration
 1. Add Sensor "Program/Script Advanced"
+![](https://github.com/freaky-media/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG-NextCloud_Status_Image0.jpg)
 
 2. Change Name of the Sensor from XML-Programm-/Skriptsensor to  NextCloud Status or some else
 
