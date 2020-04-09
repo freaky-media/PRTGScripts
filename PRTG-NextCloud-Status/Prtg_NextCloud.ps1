@@ -9,14 +9,14 @@
     File Name      : Prtg_NextCloud.ps1
     Author         : Frank Fischer (info@freaky-media.de)
     Prerequisite   : PowerShell 3V over Win10 and upper.
-    Copyright 2019 - FrankFischer/freaky-media
+    Copyright 2020 - FrankFischer/freaky-media
 .LINK
     
     
 .EXAMPLE
     
 .VERSION
-    Version: 1.0 beta
+    Version: 1.1 RC1
     
 #>
 
@@ -123,11 +123,42 @@ $NCActiveUsers_Last1hour = $xmlGetNCStatusPage.ocs.data.activeUsers.last1hour
 $NCActiveUsers_Last24hours = $xmlGetNCStatusPage.ocs.data.activeUsers.last24hours
 
 # Get NextCloud Mem Status
-
+if($xmlGetNCStatusPage.ocs.data.nextcloud.system.mem_total -eq "N/A")
+{
+$NCMemTotal = 0
+}
+else
+{
 $NCMemTotal = [math]::Round($xmlGetNCStatusPage.ocs.data.nextcloud.system.mem_total / 1024,2) # Shows Values as MB
+}
+
+if($xmlGetNCStatusPage.ocs.data.nextcloud.system.mem_free -eq "N/A")
+{
+$NCMemFree = 0
+}
+else
+{
 $NCMemFree = [math]::Round($xmlGetNCStatusPage.ocs.data.nextcloud.system.mem_free / 1024,2) # Shows Values as MB
+}
+
+if($xmlGetNCStatusPage.ocs.data.nextcloud.system.swap_total -eq "N/A")
+{
+$NCSwapTotal = 0
+}
+else
+{
 $NCSwapTotal = [math]::Round($xmlGetNCStatusPage.ocs.data.nextcloud.system.swap_total / 1024,2) # Shows Values as MB
+}
+
+if($xmlGetNCStatusPage.ocs.data.nextcloud.system.swap_free -eq "N/A")
+{
+$NCSwapFree = 0
+}
+else
+{
 $NCSwapFree = [math]::Round($xmlGetNCStatusPage.ocs.data.nextcloud.system.swap_free / 1024,2) # Shows Values as MB
+}
+
 
 # Get SQL Status DB Storage
 $NCSQLDB_Status = [math]::Round($xmlGetNCStatusPage.ocs.data.server.database.size/1024/1024,2) # Shows Values as MB
