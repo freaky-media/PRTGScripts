@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="NextCloudMessageLookup.State" desiredValue="0" undefinedState="None">
+    <Lookups>
+	<!--  -->
+      <SingleInt  state="OK" value="0">
+        OK
+      </SingleInt >
+	  <SingleInt  state="ERROR" value="3">
+        Failure: Invalid query, please check the syntax
+      </SingleInt >
+	        
+    </Lookups>
+  </ValueLookup>

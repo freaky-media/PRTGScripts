@@ -16,7 +16,7 @@
 .EXAMPLE
     
 .VERSION
-    Version: 1.1 RC1
+    Version: 1.2
     
 #>
 

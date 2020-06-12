@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <ValueLookup id="NextCloudStatusLookup.State" desiredValue="0" undefinedState="None">
+    <Lookups>
+	<!--  -->
+      <SingleInt  state="OK" value="0">
+        OK
+      </SingleInt >
+	  <SingleInt  state="ERROR" value="3">
+        NextCloud Error
+      </SingleInt >
+	  <SingleInt  state="ERROR" value="997">
+       Not Authorized
+      </SingleInt >
+	   <SingleInt  state="ERROR" value="999">
+        Unknow Error
+      </SingleInt >
+      	   <SingleInt  state="ERROR" value="404">
+        Invalid query
+      </SingleInt >
+    </Lookups>
+  </ValueLookup>
