@@ -22,3 +22,15 @@ If you want Monitoring Systems on Remote Probes, Copy Script to the Remote Probe
 -NCusername SomeUserNameWithAdministrativeRights -NCpassword thePasswordForTheUser -NCURL cloud.your-domain-from-cloud.com
 
 ![](https://github.com/freaky-media/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG-NextCloud_Status_Image2_SensorSetup.jpg)
+
+5. Add Lookups
+Copy NextCloudMessageLookup.ovl, NextCloudStatusCodeLookup.ovl, NextCloudStatusLookup.ovl
+into your Prtg Installation Folder \ YOURPRTGInstallPath\Program Files (x86)\PRTG Network Monitor\lookups\custom
+
+6. Reload Lookups
+Go to Configuration => System Administration => Administrative Tools => 
+![](https://github.com/freaky-media/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG-NextCloud_Status_Image_conf_0.jpg)
+
+click to reload the Lookups
+![](https://github.com/freaky-media/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG-NextCloud_Status_Image_conf_1.jpg)
+
