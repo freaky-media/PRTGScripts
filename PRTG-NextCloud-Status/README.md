@@ -1,38 +1,34 @@
 
 
-Version Status: v1.2
+Version Status: v1.21 - This is a fork from https://github.com/freaky-media/PRTGScripts/
 
 # PRTG NextCloud Status
-PowerShell Script to get some Information about your NextCloud Server
-![](https://github.com/freaky-media/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG-NextCloud_Status_Image1.jpg)
+In order to monitor your Nextcloud API (XML) via PRTG, you can use the following steps
+![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_prtg-screenshot.png)
 
-### Installation
+### 1. Installation in PRTG
 
-Copy PS1 File to YOURPRTGInstallPath\Program Files (x86)\PRTG Network Monitor\Custom Sensors\EXEXML
-If you want Monitoring Systems on Remote Probes, Copy Script to the Remote Probe
+1.1 Copy the PS1 File to your PRTG server in the path C:\Program Files (x86)\PRTG Network Monitor\Custom Sensors\EXEXML. If you want to monitoring nextcloud systems from your PRTG remote probes, copy the script to the remote probe.
 
-### Configuration
-1. Add Sensor "Program/Script Advanced"
-![](https://github.com/freaky-media/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG-NextCloud_Status_Image0.jpg)
+![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_ps-file.png)
 
-2. Change Name of the Sensor from XML-Programm-/Skriptsensor to  NextCloud Status or some else
+1.2 Create the following lookup files NextCloudMessageLookup.ovl, NextCloudStatusCodeLookup.ovl, NextCloudStatusLookup.ovl into your PRTG installation folder C:\Program Files (x86)\PRTG Network Monitor\lookups\custom
 
-3. Choose in Sensorsettings the New Script called, PRTG_NextCloud.ps1
+![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_lookup-files.png)
 
-4. Add Parameter
--NCusername SomeUserNameWithAdministrativeRights -NCpassword thePasswordForTheUser -NCURL cloud.your-domain-from-cloud.com
+1.3 Reload Lookups:
+![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_reload-lookups.png)
 
-![](https://github.com/freaky-media/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG-NextCloud_Status_Image2_SensorSetup.jpg)
-5. Add Lookups
-Copy NextCloudMessageLookup.ovl, NextCloudStatusCodeLookup.ovl, NextCloudStatusLookup.ovl
-into your Prtg Installation Folder \ YOURPRTGInstallPath\Program Files (x86)\PRTG Network Monitor\lookups\custom
+### 2. Configuration in PRTG
 
-6. Reload Lookups
-Go to Configuration => System Administration => Administrative Tools => 
-![](https://github.com/freaky-media/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG-NextCloud_Status_Image_conf_0.jpg)
+2.1 Add the sensor "EXE/Script Advanced" PRTG add sensor 
 
-click to reload the Lookups
-![](https://github.com/freaky-media/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG-NextCloud_Status_Image_conf_1.jpg)
+![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_sensor-create.png)
 
-> Please note that some hosts cannot access all data. Therefore it can be the values ​​like e.g. free memory is not displayed correctly
+2.2 Change the sensor name
 
+2.3 Choose in the powershell script PRTG_NextCloud.ps1.
+
+2.4 Add parameter -NCusername *YourNCAdminUser* -NCpassword *StrongPassSentence* -NCURL *YourNCFQDN*
+
+![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_sensor-cfg.png)
