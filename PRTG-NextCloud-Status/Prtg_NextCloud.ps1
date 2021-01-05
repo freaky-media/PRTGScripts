@@ -7,7 +7,7 @@
     PRTG Custom Sensor Script for Monitoring NextCloud Intances
 .NOTES
     File Name      : Prtg_NextCloud.ps1
-    Author         : Frank Fischer (info@freaky-media.de)
+    Author         : Frank Fischer (info@freaky-media.de), Flo collysucker (https://github.com/collysucker/)
     Prerequisite   : PowerShell 3V over Win10 and upper.
     Copyright 2020 - FrankFischer/freaky-media
 .LINK
@@ -16,7 +16,7 @@
 .EXAMPLE
     
 .VERSION
-    Version: 1.2
+    Version: 1.21 - Added TLSv1.2 support
     
 #>
 
@@ -58,6 +58,7 @@ if (-not $NCurl) {
 "@
 }
 
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
 $NCAPIURL = “https://$NCurl/ocs/v2.php/apps/serverinfo/api/v1/info”
 
