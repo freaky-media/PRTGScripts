@@ -15,7 +15,8 @@ In order to monitor your Nextcloud API (XML) via PRTG, you can use the following
 
 ![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_lookup-files.png)
 
-1.3 Reload Lookups:
+1.3 Reload Lookups: 
+`PRTG GUI -> Setup -> System Administration -> Administrative Tools -> Load Lookups and File Lists -> Go! Button` <br />
 ![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_reload-lookups.png)
 
 ### 2. Configuration in PRTG
