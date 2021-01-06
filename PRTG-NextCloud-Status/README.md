@@ -1,6 +1,5 @@
-
-
-Version Status: v1.21 - This is a fork from https://github.com/freaky-media/PRTGScripts/
+Version Status: v1.2 - This is a fork from https://github.com/freaky-media/PRTGScripts/
+Version Status: v1.21 - Added TLSv1.2 support, updated the HowTo guide
 
 # PRTG NextCloud Status
 In order to monitor your Nextcloud API (XML) via PRTG, you can use the following steps
