@@ -1,4 +1,4 @@
-Version Status: v1.2 - This is a fork from https://github.com/freaky-media/PRTGScripts/
+Version Status: v1.2 - This is a fork from https://github.com/freaky-media/PRTGScripts/ <br />
 Version Status: v1.21 - Added TLSv1.2 support, updated the HowTo guide
 
 # PRTG NextCloud Status
@@ -7,11 +7,11 @@ In order to monitor your Nextcloud API (XML) via PRTG, you can use the following
 
 ### 1. Installation in PRTG
 
-1.1 Copy the PS1 File to your PRTG server in the path C:\Program Files (x86)\PRTG Network Monitor\Custom Sensors\EXEXML. If you want to monitoring nextcloud systems from your PRTG remote probes, copy the script to the remote probe.
+1.1 Copy the PS1 File to your PRTG server in the path `C:\Program Files (x86)\PRTG Network Monitor\Custom Sensors\EXEXML`. If you want to monitoring nextcloud systems from your PRTG remote probes, copy the script to the remote probe.
 
 ![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_ps-file.png)
 
-1.2 Create the following lookup files NextCloudMessageLookup.ovl, NextCloudStatusCodeLookup.ovl, NextCloudStatusLookup.ovl into your PRTG installation folder C:\Program Files (x86)\PRTG Network Monitor\lookups\custom
+1.2 Create the following lookup files [NextCloudMessageLookup.ovl](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/NextCloudMessageLookup.ovl), [NextCloudStatusCodeLookup.ovl](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/NextCloudStatusCodeLookup.ovl), [NextCloudStatusLookup.ovl](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/NextCloudStatusLookup.ovl) into your PRTG installation folder `C:\Program Files (x86)\PRTG Network Monitor\lookups\custom`
 
 ![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_lookup-files.png)
 
@@ -28,6 +28,6 @@ In order to monitor your Nextcloud API (XML) via PRTG, you can use the following
 
 2.3 Choose in the powershell script PRTG_NextCloud.ps1.
 
-2.4 Add parameter -NCusername *YourNCAdminUser* -NCpassword *StrongPassSentence* -NCURL *YourNCFQDN*
+2.4 Add parameter `-NCusername *YourNCAdminUser* -NCpassword *StrongPassSentence* -NCURL *YourNCFQDN*`
 
 ![](https://github.com/flostyen/PRTGScripts/blob/master/PRTG-NextCloud-Status/PRTG_NextCloud-API-XML_sensor-cfg.png)
