@@ -6,8 +6,8 @@
 .DESCRIPTION
     PRTG Custom Sensor Script for Monitoring NextCloud Intances
 .NOTES
-    File Name      : Prtg_NextCloud.ps1
-    Author         : Frank Fischer (info@freaky-media.de), Flo collysucker (https://github.com/collysucker/)
+    File Name      : PRTG_NextCloud.ps1
+    Author         : Frank Fischer (info@freaky-media.de), Flo flostyen (https://github.com/flostyen/)
     Prerequisite   : PowerShell 3V over Win10 and upper.
     Copyright 2020 - FrankFischer/freaky-media
 .LINK
