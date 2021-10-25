@@ -61,12 +61,9 @@ if (-not $NCurl) {
 
 $NCAPIURL = “https://$NCurl/ocs/v2.php/apps/serverinfo/api/v1/info”
 
-
-$base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $NCusername,$NCpassword)))
-
-$headers = @{}
-$headers[“OCS-APIRequest”] = “true”
-$headers[“Authorization”]=(“Basic {0}” -f $base64AuthInfo)
+$pair = "$($NCusername):$($NCpassword)"
+$encodedCredentials = [System.Convert]::ToBase64String([System.Text.Encoding]::ASCII.GetBytes($Pair))
+$headers = @{'OCS-APIRequest'="true"; "Authorization" = "Basic $encodedCredentials" }
 
 #$body = @{}
 
