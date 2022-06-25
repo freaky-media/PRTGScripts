@@ -165,6 +165,14 @@ $NCSwapFree = [math]::Round($xmlGetNCStatusPage.ocs.data.nextcloud.system.swap_f
 $NCSQLDB_Status = [math]::Round($xmlGetNCStatusPage.ocs.data.server.database.size/1024/1024,2) # Shows Values as MB
 # Get Share Infos
 $NCGetShareLink_withoutPassword = $xmlGetNCStatusPage.ocs.data.nextcloud.shares.num_shares_link_no_password
+$NCGetShares = $xmlGetNCStatusPage.ocs.data.nextcloud.shares.num_shares
+$NCGetShares_user = $xmlGetNCStatusPage.ocs.data.nextcloud.shares.num_shares_user
+$NCGetshares_groups = $xmlGetNCStatusPage.ocs.data.nextcloud.shares.num_shares_groups
+$NCGetshares_link = $xmlGetNCStatusPage.ocs.data.nextcloud.shares.num_shares_link
+$NCGetshares_mail = $xmlGetNCStatusPage.ocs.data.nextcloud.shares.num_shares_mail
+$NCGetshares_room = $xmlGetNCStatusPage.ocs.data.nextcloud.shares.num_shares_room
+$NCGetfed_shares_sent = $xmlGetNCStatusPage.ocs.data.nextcloud.shares.num_fed_shares_sent
+$NCGetfed_shares_received = $xmlGetNCStatusPage.ocs.data.nextcloud.shares.num_fed_shares_received
 
 # Get App Status Update Avail
 
@@ -252,7 +260,42 @@ Write-Host
             "<customunit>MB</customunit>"
             "</result>"
 
-            
+            "<channel>Shares active</channel>"
+            "<value>$NCGetShares</value>"
+            "<float>0</float>"
+            "<LimitMinError>0</LimitMinError>"
+		    "<LimitMode>1</LimitMode>"
+            "<unit>Custom</unit>"
+            "<customunit># Shares</customunit>"
+            "</result>"
+ 
+            "<channel>Shares with users</channel>"
+            "<value>$NCGetShares_user</value>"
+            "<float>0</float>"
+            "<LimitMinError>0</LimitMinError>"
+		    "<LimitMode>1</LimitMode>"
+            "<unit>Custom</unit>"
+            "<customunit># Shares</customunit>"
+            "</result>"
+
+            "<channel>Shares with groups</channel>"
+            "<value>$NCGetShares_groups</value>"
+            "<float>0</float>"
+            "<LimitMinError>0</LimitMinError>"
+		    "<LimitMode>1</LimitMode>"
+            "<unit>Custom</unit>"
+            "<customunit># Shares</customunit>"
+            "</result>"
+
+            "<channel>Shares via link</channel>"
+            "<value>$NCGetShares_link</value>"
+            "<float>0</float>"
+            "<LimitMinError>0</LimitMinError>"
+		    "<LimitMode>1</LimitMode>"
+            "<unit>Custom</unit>"
+            "<customunit># Shares</customunit>"
+            "</result>"
+
             "<result>"
             "<channel>Share Links without Password</channel>"
             "<value>$NCGetShareLink_withoutPassword</value>"
@@ -263,6 +306,42 @@ Write-Host
             "<customunit># Shares</customunit>"
             "</result>"
 
+            "<channel>Shares via Mail</channel>"
+            "<value>$NCGetShares_mail</value>"
+            "<float>0</float>"
+            "<LimitMinError>0</LimitMinError>"
+		    "<LimitMode>1</LimitMode>"
+            "<unit>Custom</unit>"
+            "<customunit># Shares</customunit>"
+            "</result>"
+
+            "<channel>Shares via Talk</channel>"
+            "<value>$NCGetShares_room</value>"
+            "<float>0</float>"
+            "<LimitMinError>0</LimitMinError>"
+		    "<LimitMode>1</LimitMode>"
+            "<unit>Custom</unit>"
+            "<customunit># Shares</customunit>"
+            "</result>"
+
+            "<channel>Federated Shares Received</channel>"
+            "<value>$NCGetShares_fed_shares_received</value>"
+            "<float>0</float>"
+            "<LimitMinError>0</LimitMinError>"
+		    "<LimitMode>1</LimitMode>"
+            "<unit>Custom</unit>"
+            "<customunit># Shares</customunit>"
+            "</result>"
+
+            "<channel>Federated Shares Sent</channel>"
+            "<value>$NCGetShares_fed_shares_sent</value>"
+            "<float>0</float>"
+            "<LimitMinError>0</LimitMinError>"
+		    "<LimitMode>1</LimitMode>"
+            "<unit>Custom</unit>"
+            "<customunit># Shares</customunit>"
+            "</result>"
+	    
             "<result>"
             "<channel>Apps with Updates</channel>"
             "<value>$NCGetAppUpdateStatus</value>"
