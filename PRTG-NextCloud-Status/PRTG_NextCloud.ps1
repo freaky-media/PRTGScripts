@@ -187,7 +187,6 @@ Write-Host "
 <prtg>"
 
 Write-Host
-"<result>"
              "<result>"
             "<channel>Nextcloud Status</channel>"
             "<value>$NC_OCS_Meta_Status</value>"
@@ -252,14 +251,15 @@ Write-Host
             "<customunit>MB</customunit>"
             "</result>"
 
-              "<result>"
+            "<result>"
             "<channel>SQL DB Size</channel>"
             "<value>$NCSQLDB_Status</value>"
             "<float>1</float>"
             "<unit>Custom</unit>"
             "<customunit>MB</customunit>"
             "</result>"
-
+            
+	    "<result>"
             "<channel>Shares active</channel>"
             "<value>$NCGetShares</value>"
             "<float>0</float>"
@@ -269,6 +269,7 @@ Write-Host
             "<customunit># Shares</customunit>"
             "</result>"
  
+             "<result>"
             "<channel>Shares with users</channel>"
             "<value>$NCGetShares_user</value>"
             "<float>0</float>"
@@ -278,6 +279,7 @@ Write-Host
             "<customunit># Shares</customunit>"
             "</result>"
 
+            "<result>"
             "<channel>Shares with groups</channel>"
             "<value>$NCGetShares_groups</value>"
             "<float>0</float>"
@@ -287,6 +289,7 @@ Write-Host
             "<customunit># Shares</customunit>"
             "</result>"
 
+            "<result>"
             "<channel>Shares via link</channel>"
             "<value>$NCGetShares_link</value>"
             "<float>0</float>"
@@ -306,6 +309,7 @@ Write-Host
             "<customunit># Shares</customunit>"
             "</result>"
 
+            "<result>"
             "<channel>Shares via Mail</channel>"
             "<value>$NCGetShares_mail</value>"
             "<float>0</float>"
@@ -315,6 +319,7 @@ Write-Host
             "<customunit># Shares</customunit>"
             "</result>"
 
+            "<result>"
             "<channel>Shares via Talk</channel>"
             "<value>$NCGetShares_room</value>"
             "<float>0</float>"
@@ -324,6 +329,7 @@ Write-Host
             "<customunit># Shares</customunit>"
             "</result>"
 
+            "<result>"
             "<channel>Federated Shares Received</channel>"
             "<value>$NCGetShares_fed_shares_received</value>"
             "<float>0</float>"
@@ -333,6 +339,7 @@ Write-Host
             "<customunit># Shares</customunit>"
             "</result>"
 
+            "<result>"
             "<channel>Federated Shares Sent</channel>"
             "<value>$NCGetShares_fed_shares_sent</value>"
             "<float>0</float>"
