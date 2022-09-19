@@ -60,14 +60,14 @@ if (-not $NCurl) {
 
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 
-$NCAPIURL = “https://$NCurl/ocs/v2.php/apps/serverinfo/api/v1/info”
+$NCAPIURL = "https://$NCurl/ocs/v2.php/apps/serverinfo/api/v1/info"
 
 
 $base64AuthInfo = [Convert]::ToBase64String([Text.Encoding]::ASCII.GetBytes(("{0}:{1}" -f $NCusername,$NCpassword)))
 
 $headers = @{}
-$headers[“OCS-APIRequest”] = “true”
-$headers[“Authorization”]=(“Basic {0}” -f $base64AuthInfo)
+$headers["OCS-APIRequest"] = "true"
+$headers["Authorization"]=("Basic {0}" -f $base64AuthInfo)
 
 #$body = @{}
 
